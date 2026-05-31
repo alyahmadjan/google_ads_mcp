@@ -1,3 +1,4 @@
+# Google Ads MCP Server requirements
 # requirements.txt — Google Ads MCP Server
 # Install with: pip install -r requirements.txt
 
