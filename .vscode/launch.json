@@ -1,0 +1,16 @@
+{
+  // .vscode/launch.json — Run or debug server.py from the VS Code Run panel.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run MCP Server",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/server.py",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env",
+      "justMyCode": true
+    }
+  ]
+}

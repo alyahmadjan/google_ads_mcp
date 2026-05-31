@@ -1,0 +1,21 @@
+# .gitignore — Never commit credentials or generated files.
+
+# ── Secrets ──────────────────────────────────────────────────────────────────
+.env
+google-ads.yaml
+
+# ── Python virtual environment ────────────────────────────────────────────────
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+dist/
+build/
+*.egg-info/
+
+# ── VS Code workspace ─────────────────────────────────────────────────────────
+.vscode/settings.json
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log

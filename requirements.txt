@@ -1,0 +1,15 @@
+# requirements.txt — Google Ads MCP Server
+# Install with: pip install -r requirements.txt
+
+# MCP framework — FastMCP is the official high-level Python SDK
+mcp[cli]>=1.0.0
+
+# Google Ads Python client library (official, from Google)
+google-ads>=24.0.0
+
+# Load environment variables from .env files
+python-dotenv>=1.0.0
+
+# Async helper — used to run the blocking Google Ads client off the event loop
+# (ships with mcp, but pinned here since server.py imports it directly)
+anyio>=4.0.0

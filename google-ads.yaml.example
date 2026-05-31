@@ -1,0 +1,44 @@
+# google-ads.yaml.example — Copy this to google-ads.yaml and fill in your values.
+#
+#   cp google-ads.yaml.example google-ads.yaml   (Windows: copy)
+#
+# The library discovers the completed file in this order:
+#   1. The path in GOOGLE_ADS_CONFIGURATION_FILE_PATH (set in .env)
+#   2. ~/google-ads.yaml
+#   3. ~/.config/google-ads.yaml
+#
+# NOTE: the default search does NOT include the project folder — if you keep
+# google-ads.yaml here, point GOOGLE_ADS_CONFIGURATION_FILE_PATH at it (.env).
+#
+# Never commit google-ads.yaml — it contains secrets (it is in .gitignore).
+#
+# ── How to get these values ──────────────────────────────────────────────────
+#
+# developer_token:
+#   Apply at https://developers.google.com/google-ads/api/docs/get-started/dev-token
+#   Basic Access is sufficient for fetching your own account data.
+#
+# client_id / client_secret:
+#   1. Go to https://console.cloud.google.com/
+#   2. Create a project, enable the Google Ads API.
+#   3. Create an OAuth 2.0 Client ID (Desktop application type).
+#   4. Download the JSON — client_id and client_secret are inside it.
+#
+# refresh_token:
+#   Run the OAuth2 helper from the google-ads-python library:
+#       python -m google.ads.googleads.oauth2 \
+#           --client_id YOUR_CLIENT_ID \
+#           --client_secret YOUR_CLIENT_SECRET
+#   Follow the browser prompts. Paste the code back. Copy the refresh_token.
+#
+# login_customer_id (optional):
+#   Only needed if you query through an MCC (manager) account. Set it to the
+#   MCC's customer ID (no dashes). Leave commented out for single accounts.
+# ─────────────────────────────────────────────────────────────────────────────
+
+developer_token: YOUR_DEVELOPER_TOKEN
+client_id: YOUR_CLIENT_ID.apps.googleusercontent.com
+client_secret: YOUR_CLIENT_SECRET
+refresh_token: YOUR_REFRESH_TOKEN
+# login_customer_id: "1234567890"   # Uncomment ONLY for MCC accounts
+use_proto_plus: True
